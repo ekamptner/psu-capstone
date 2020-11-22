@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+    <title>grenfell_gridstat_after</title>
+    <layers>
+        <layer>
+            <datasource>
+                <type>ESRI Shapefile</type>
+                <path>grenfell_gridstat_after.shp</path>
+            </datasource>
+            <layername>grenfell_gridstat_after</layername>
+            <title/>
+            <variable_order>
+                <time_ids>
+                    <id>time 0</id>
+                </time_ids>
+                <var>gid</var>
+                <var>id</var>
+                <var>xmin</var>
+                <var>xmax</var>
+                <var>ymin</var>
+                <var>ymax</var>
+                <var>cell_id</var>
+                <var>nodecount</var>
+                <var>avgversion</var>
+                <var>attributec</var>
+                <var>usercount</var>
+                <var>node_G_STR</var>
+                <var>node_C_ID</var>
+                <var>versi__STR</var>
+                <var>versi_C_ID</var>
+                <var>PP_VAL</var>
+                <var>attri__STR</var>
+                <var>attri_C_ID</var>
+                <var>user_G_STR</var>
+                <var>user_C_ID</var>
+            </variable_order>
+            <custom_classifications/>
+            <weights_entries>
+                <weights>
+                    <title>grenfell</title>
+                    <default/>
+                    <meta_info>
+                        <path>grenfell.gal</path>
+                        <id_variable>id</id_variable>
+                    </meta_info>
+                </weights>
+            </weights_entries>
+            <default_vars>
+                <default_var>
+                    <name>usercount</name>
+                    <time_id>time 0</time_id>
+                </default_var>
+                <default_var>
+                    <name/>
+                    <time_id>time 0</time_id>
+                </default_var>
+                <default_var>
+                    <name/>
+                    <time_id>time 0</time_id>
+                </default_var>
+                <default_var>
+                    <name/>
+                    <time_id>time 0</time_id>
+                </default_var>
+            </default_vars>
+        </layer>
+    </layers>
+</project>
