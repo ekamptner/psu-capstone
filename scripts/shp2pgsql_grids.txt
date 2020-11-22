@@ -1,0 +1,7 @@
+shp2pgsql -I -s 32639 "C:\Users\Erola\Documents\Penn State\Capstone\data\grids\metric_grids\plasco_grid_metric.shp" public.plasco_grid_metric_30 | psql -h 127.0.0.1 -p 5433 -U osm
+
+shp2pgsql -I -s 32630 "C:\Users\Erola\Documents\Penn State\Capstone\data\grids\metric_grids\grenfell_grid_metric.shp" public.grenfell_grid_metric_30 | psql -h 127.0.0.1 -p 5433 -U osm
+
+shp2pgsql -I -s 32610 "C:\Users\Erola\Documents\Penn State\Capstone\data\grids\metric_grids\ghostship_grid_metric.shp" public.ghostship_grid_metric_30 | psql -h 127.0.0.1 -p 5433 -U osm
+
+shp2pgsql -I -s 32637 "C:\Users\Erola\Documents\Penn State\Capstone\data\grids\metric_grids\kilinto_grid_metric.shp" public.kilinto_grid_metric_30 | psql -h 127.0.0.1 -p 5433 -U osm

@@ -1,0 +1,5 @@
+-- Ethiopia 
+Select * from relations
+Where filename like '%ethiopia%'  
+And timestamp > '2016-09-02' and timestamp < '2016-10-03'
+Limit 100;

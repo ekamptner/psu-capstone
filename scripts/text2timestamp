@@ -1,0 +1,9 @@
+Update relations
+Set timestamp = make_timestamp(
+substring(timestamp_txt from 1 for 4)::integer,
+substring(timestamp_txt from 6 for 2)::integer,
+substring(timestamp_txt from 9 for 2)::integer,
+substring(timestamp_txt from 12 for 2)::integer,
+substring(timestamp_txt from 15 for 2)::integer,
+substring(timestamp_txt from 18 for 2)::integer)
+

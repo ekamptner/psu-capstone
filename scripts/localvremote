@@ -1,0 +1,32 @@
+CREATE TABLE local_v_remote
+(
+    event text, 
+    uid integer, 
+    distance_km numeric(10, 2)
+    )
+
+Insert into local_v_remote 
+Select 'Grenfell' as Event, c.uid::bigint , (ST_Distance(ST_Transform(i.geom, i.srid),
+                           ST_Transform(ST_Centroid(ST_Union(c.geom)), i.srid))* 0.001) as distance_km
+From incidents i, changesets c join users u
+ON c.uid::bigint = u.id 
+Where u.event = 'grenfell' 
+	and i.gid = 1 and u.id != 142831
+Group by c.uid, u.user, u.event, i.geom, i.srid ;
+
+Select 'Plasco' as Event,c.uid, (ST_Distance(ST_Transform(i.geom, i.srid),
+                           ST_Transform(ST_Centroid(ST_Union(c.geom)), i.srid))* 0.001) as distance_km
+From incidents i, changesets c join users u
+ON c.uid::bigint = u.id 
+Where u.event = 'plasco' 
+	and i.gid = 4 
+Group by c.uid, u.user, u.event, i.geom, i.srid
+
+
+Select 'Ghost Ship' as Event,c.uid, (ST_Distance(ST_Transform(i.geom, i.srid),
+                           ST_Transform(ST_Centroid(ST_Union(c.geom)), i.srid))* 0.001) as distance_km
+From incidents i, changesets c join users u
+ON c.uid::bigint = u.id 
+Where u.event = 'ghost ship' 
+	and i.gid = 2 and u.id != 2760218 and u.id != 339581 and u.id != 4977128
+Group by c.uid, u.user, u.event, i.geom, i.srid

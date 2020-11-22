@@ -1,0 +1,6 @@
+     Length Class  Mode   
+[1,] 2886   -none- numeric
+[2,]    2   -none- numeric
+[3,]   25   -none- numeric
+[4,]    1   -none- numeric
+[5,]    2   -none- numeric

@@ -1,0 +1,14 @@
+
+-- Number of ids edited (excluding mass updates)
+Select uid, user, count(distinct id) as id_count, count(distinct changeset) as changeset_count From event_users_dedupe
+Where changeset IN (Select changeset From event_users_dedupe Group by changeset Having count(id) < 1000)
+Group by uid, user
+Order by uid::bigint
+
+
+-- Number of ids edited per country (nodes only)
+Select e.uid, e.user, count(distinct e.id) as id_count, c.gid as country_gid, c.name_long INTO user_nodes_per_country_all
+From event_users_dedupe as e, countries as c
+Where e.type = 'node' AND ST_WITHIN(e.geom, c.geom)
+Group by e.uid, e.user, c.gid
+
