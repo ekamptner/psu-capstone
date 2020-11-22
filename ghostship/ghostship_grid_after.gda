@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+    <title>ghostship_grid_after</title>
+    <layers>
+        <layer>
+            <datasource>
+                <type>ESRI Shapefile</type>
+                <path>ghostship_grid_after.shp</path>
+            </datasource>
+            <layername>ghostship_grid_after</layername>
+            <title/>
+            <variable_order>
+                <time_ids>
+                    <id>time 0</id>
+                </time_ids>
+                <var>gid</var>
+                <var>id</var>
+                <var>__xmin</var>
+                <var>__xmax</var>
+                <var>ymin</var>
+                <var>ymax</var>
+                <var>ghostship_</var>
+                <var>ghostshi_1</var>
+                <var>ghostshi_2</var>
+                <var>ghostshi_3</var>
+                <var>ghostshi_4</var>
+            </variable_order>
+            <custom_classifications/>
+            <weights_entries>
+                <weights>
+                    <title>ghostship_grid_after</title>
+                    <default/>
+                    <meta_info>
+                        <path>ghostship_grid_after.gal</path>
+                        <id_variable>id</id_variable>
+                    </meta_info>
+                </weights>
+            </weights_entries>
+            <default_vars>
+                <default_var>
+                    <name>ghostshi_1</name>
+                    <time_id>time 0</time_id>
+                </default_var>
+                <default_var>
+                    <name/>
+                    <time_id>time 0</time_id>
+                </default_var>
+                <default_var>
+                    <name/>
+                    <time_id>time 0</time_id>
+                </default_var>
+                <default_var>
+                    <name/>
+                    <time_id>time 0</time_id>
+                </default_var>
+            </default_vars>
+        </layer>
+    </layers>
+</project>
